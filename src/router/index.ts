@@ -1,28 +1,41 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '@/views/HomeView.vue'
+import MainLayout from '@/layouts/MainLayout.vue'
+import HomePage from '@/pages/HomePage.vue'
+import ProductsPage from '@/pages/ProductsPage.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: HomeView,
-    },
-    {
-      path: '/products',
-      name: 'products',
-      component: () => import('@/views/ProductsView.vue'),
-    },
-    {
-      path: '/scan-barcode',
-      name: 'scanBarcode',
-      component: () => import('@/views/ScanBarcodeView.vue'),
-    },
-    {
-      path: '/:catchAll(.*)',
-      name: 'NotFound',
-      component: () => import('@/views/NotFoundView.vue'),
+      component: MainLayout,
+      children: [
+        {
+          path: '',
+          name: 'Home',
+          component: HomePage,
+        },
+        {
+          path: 'products',
+          name: 'AllProducts',
+          component: ProductsPage,
+        },
+        {
+          path: 'scan-barcode',
+          name: 'ScanBarcode',
+          component: { template: '<div class="p-4">Barkod Tarama Sayfası</div>' },
+        },
+        {
+          path: '/tags',
+          name: 'Tags',
+          component: { template: '<div class="p-4">Tags Sayfası</div>' },
+        },
+        {
+          path: '/:pathMatch(.*)*', // Catch-all route for 404
+          name: 'NotFound',
+          component: { template: '<div class="p-4">Sayfa Bulunamadı (404)</div>' },
+        },
+      ],
     },
   ],
 })
