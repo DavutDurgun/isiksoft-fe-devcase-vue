@@ -1,9 +1,9 @@
 <template>
   <div class="min-h-screen flex">
     <div class="flex-1 flex flex-col">
-      <main class="flex-1 p-6">
+      <main class="flex-1">
         <ProductStatsCards />
-        <div class="bg-white p-6 rounded-lg shadow-md mt-6">
+        <div class="bg-white rounded-lg shadow-md mt-6">
           <ProductTableHeader
             @addProduct="handleAddNewProduct"
             @refresh="handleRefreshProducts"

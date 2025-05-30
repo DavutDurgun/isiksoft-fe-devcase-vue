@@ -12,32 +12,32 @@
                 :checked="selectedProductIds.size === products.length && products.length > 0"
                 ref="masterCheckboxRef"
               />
-              <span class="ml-2">Product</span>
+              <span class="ml-2">{{ $t('product') }}</span>
             </div>
           </th>
           <th
             scope="col"
             class="hidden md:table-cell px-6 py-3 text-left text-base font-bold tracking-wider w-[18%]"
           >
-            Transaction ID
+            {{ $t('transactionID') }}
           </th>
           <th
             scope="col"
             class="hidden lg:table-cell px-6 py-3 text-left text-base font-bold tracking-wider w-[18%]"
           >
-            Date
+            {{ $t('date') }}
           </th>
           <th
             scope="col"
             class="hidden lg:table-cell px-6 py-3 text-left text-base font-bold tracking-wider w-[15%]"
           >
-            Amount
+            {{ $t('amount') }}
           </th>
           <th
             scope="col"
             class="hidden lg:table-cell px-6 py-3 text-left text-base font-bold tracking-wider w-[18%]"
           >
-            Status
+            {{ $t('status') }}
           </th>
           <th
             scope="col"

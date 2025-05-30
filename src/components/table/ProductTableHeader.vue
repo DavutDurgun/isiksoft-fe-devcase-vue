@@ -1,8 +1,8 @@
 <template>
   <div
-    class="flex flex-col sm:flex-row justify-between items-start md:items-center mb-6 space-y-4 md:space-y-0 w-full"
+    class="flex flex-col sm:flex-row justify-between items-start md:items-center p-4 mb-6 space-y-4 md:space-y-0 w-full"
   >
-    <h1 class="text-[20px] font-bold text-[#333333]">All Products</h1>
+    <h1 class="text-[20px] font-bold text-[#333333]">{{ $t('allProducts') }}</h1>
     <div class="flex justify-end gap-1 w-full md:w-auto">
       <div class="relative flex-grow hidden lg:block">
         <MagnifyingGlassIcon
@@ -10,7 +10,7 @@
         />
         <input
           type="text"
-          placeholder="Search item..."
+          :placeholder="$t('searchHere')"
           class="pl-10 pr-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent w-full"
         />
       </div>
@@ -51,7 +51,7 @@
         @click="emit('addProduct')"
       >
         <PlusIcon class="h-5 w-5 mr-2" />
-        Add New Product
+        {{ $t('addNewProduct') }}
       </button>
     </div>
   </div>

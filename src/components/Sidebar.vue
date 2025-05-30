@@ -36,7 +36,6 @@ import SearchBar from '@/components/SearchBar.vue'
 import Logo from '@/components/Logo.vue'
 import MenuSection from '@/components/sidebar/MenuSection.vue'
 import { MENU_SECTIONS } from '@/constants/menu.ts'
-import { ChevronDoubleRightIcon } from '@heroicons/vue/24/outline'
 
 const sidebarStore = useSidebarStore()
 const { isOpen, activeMenu, currentPath } = storeToRefs(sidebarStore)
@@ -60,14 +59,14 @@ const sidebarClasses = computed(() => {
   return `
     flex flex-col bg-white shadow-lg p-4
     transition-all duration-300 ease-in-out
-    ${isOpen.value ? 'w-64' : 'w-20'}
+    ${isOpen.value ? 'min-w-64' : 'min-w-20'}
 
     fixed inset-y-0 left-0 z-50
     ${isOpen.value ? 'translate-x-0' : '-translate-x-full'}
     h-full overflow-y-auto
 
     md:relative md:flex md:translate-x-0
-    md:${isOpen.value ? 'w-64' : 'w-20'}
+    md:${isOpen.value ? 'min-w-64' : 'min-w-20'}
     md:h-screen md:overflow-y-auto
   `
     .replace(/\s+/g, ' ')

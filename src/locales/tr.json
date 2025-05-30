@@ -27,5 +27,16 @@
   "logOut": "Çıkış Yap",
   "mainMenu": "ANA MENÜ",
   "analytics": "ANALİTİK",
-  "apps": "UYGULAMALAR"
+  "apps": "UYGULAMALAR",
+  "activeProducts": "Aktif Ürünler",
+  "newProducts": "Yeni Ürünler",
+  "completedOrder": "Tamamlanan Sipariş",
+  "pendingPayment": "Bekleyen Ödeme",
+  "canceledOrder": "İptal Edilen Sipariş",
+  "product": "Ürün",
+  "transactionID": "İşlem No",
+  "date": "Tarih",
+  "amount": "Tutar",
+  "status": "Durum",
+  "manageYourProducts": "Ürünlerini yönet"
 }

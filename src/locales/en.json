@@ -27,5 +27,16 @@
   "logOut": "Log Out",
   "mainMenu": "MAIN MENU",
   "analytics": "ANALYTICS",
-  "apps": "APPS"
+  "apps": "APPS",
+  "activeProducts": "Active Products",
+  "newProducts": "New Products",
+  "completedOrder": "Completed Order",
+  "pendingPayment": "Pending Payment",
+  "canceledOrder": "Canceled Order",
+  "product": "Product",
+  "transactionID": "Transaction ID",
+  "date": "Date",
+  "amount": "Amount",
+  "status": "Status",
+  "manageYourProducts": "Manage your products"
 }

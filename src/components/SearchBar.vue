@@ -12,12 +12,9 @@
 </template>
 
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
-
 interface Props {
   isOpen: boolean
 }
 
 const props = defineProps<Props>()
-const { t } = useI18n()
 </script>

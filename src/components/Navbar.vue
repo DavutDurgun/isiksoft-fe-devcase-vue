@@ -1,13 +1,13 @@
 <template>
-  <nav class="bg-white p-4 lg:rounded-lg shadow-sm flex items-center justify-between">
+  <nav class="flex items-center justify-between bg-white p-4 lg:rounded-lg shadow-sm">
     <div class="flex items-center">
       <div class="flex md:hidden items-center space-x-2 mr-6">
         <Logo :isOpen="true" />
       </div>
 
       <div class="hidden lg:flex flex-col">
-        <h2 class="text-xl font-semibold text-gray-800">Products</h2>
-        <p class="text-sm text-gray-500 mb-2">Manage your products</p>
+        <h2 class="text-xl font-semibold text-gray-800">{{ $t('products') }}</h2>
+        <p class="text-sm text-gray-500 mb-2">{{ $t('manageYourProducts') }}</p>
       </div>
     </div>
 
