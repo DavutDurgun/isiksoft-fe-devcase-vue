@@ -1,6 +1,6 @@
 <template>
   <span
-    class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-red-500 rounded-full"
+    class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-black bg-[#CDFF65] rounded-full"
   >
     {{ count }}
   </span>

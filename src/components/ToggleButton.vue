@@ -1,23 +1,23 @@
 <template>
   <button
-    @click="$emit('click')"
-    class="p-2 rounded-md hover:bg-gray-200 focus:outline-none transition-colors duration-300"
-    :class="isOpen ? 'justify-end' : 'justify-center'"
+    @click="emit('onClick')"
+    class="absolute top-4 right-4 p-2 rounded-md hover:bg-gray-200 focus:outline-none z-50"
   >
-    <Bars3Icon v-if="isOpen" class="h-6 w-6" />
-    <Bars3Icon v-else class="h-6 w-6" />
+    <component :is="isOpen ? ChevronDoubleLeftIcon : ChevronDoubleRightIcon" class="h-6 w-6" />
   </button>
 </template>
 
 <script setup lang="ts">
-import { Bars3Icon } from '@heroicons/vue/24/outline'
+import { ChevronDoubleRightIcon, ChevronDoubleLeftIcon } from '@heroicons/vue/24/outline'
 
 interface Props {
   isOpen: boolean
 }
 
-defineProps<Props>()
-defineEmits<{
-  click: []
-}>()
+interface Emits {
+  (e: 'onClick'): void
+}
+
+const props = defineProps<Props>()
+const emit = defineEmits<Emits>()
 </script>

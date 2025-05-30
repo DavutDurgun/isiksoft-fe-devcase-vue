@@ -5,7 +5,7 @@
         :is="item.icon"
         :class="['h-5 w-5', isActive && !isSubMenu ? 'text-[#CDFF65]' : '', isOpen ? 'mr-2' : '']"
       />
-      <span :class="isOpen ? '' : 'hidden'">{{ item.name }}</span>
+      <span :class="isOpen ? '' : 'hidden'">{{ $t(item.name) }}</span>
     </div>
 
     <Badge v-if="item.badge && isOpen" :count="item.badge" />

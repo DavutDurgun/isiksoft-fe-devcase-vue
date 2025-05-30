@@ -1,7 +1,7 @@
 <template>
   <div class="mb-6">
     <h2 v-if="isOpen && section.title" class="text-md font-[700] text-[#C7C7C7] uppercase mb-2">
-      {{ section.title }}
+      {{ $t(section.title) }}
     </h2>
     <MenuList
       :items="section.items"

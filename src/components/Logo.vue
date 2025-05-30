@@ -1,21 +1,18 @@
 <template>
-  <div class="flex items-center" :class="isOpen ? 'justify-start' : 'justify-center'">
-    <div class="flex items-center">
-      <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center mr-2">
-        <span class="text-white font-bold text-sm">M</span>
-      </div>
-      <div v-if="isOpen" class="text-lg font-bold">
-        <span class="text-gray-800">master</span>
-        <span class="text-yellow-500">POS</span>
-      </div>
-    </div>
+  <div :class="`flex items-center mb-6 ${isOpen ? 'justify-start' : 'justify-center'}`">
+    <template v-if="isOpen">
+      <SwatchIcon class="h-8 w-8 text-indigo-600" />
+      <span class="text-xl font-bold text-gray-800">master POS</span>
+    </template>
   </div>
 </template>
 
 <script setup lang="ts">
+import { SwatchIcon } from '@heroicons/vue/24/outline'
+
 interface Props {
   isOpen: boolean
 }
 
-defineProps<Props>()
+const props = defineProps<Props>()
 </script>

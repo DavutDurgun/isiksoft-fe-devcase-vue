@@ -1,28 +1,23 @@
 <template>
-  <div class="mb-4" :class="isOpen ? 'block' : 'hidden'">
+  <div :class="{ hidden: !isOpen, block: isOpen }" class="mb-6">
     <div class="relative">
-      <MagnifyingGlassIcon
-        class="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400"
-      />
       <input
-        v-model="searchQuery"
         type="text"
         :placeholder="$t('searchHere')"
-        class="w-full pl-10 pr-4 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+        class="w-full p-2 pl-8 border border-gray-300 rounded-md bg-gray-100 focus:outline-none focus:ring-1 focus:ring-indigo-500"
       />
+      <span class="absolute left-2 top-1/2 -translate-y-1/2 text-gray-400"> 🔍 </span>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import { MagnifyingGlassIcon } from '@heroicons/vue/24/outline'
+import { useI18n } from 'vue-i18n'
 
 interface Props {
   isOpen: boolean
 }
 
-defineProps<Props>()
-
-const searchQuery = ref<string>('')
+const props = defineProps<Props>()
+const { t } = useI18n()
 </script>

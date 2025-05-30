@@ -8,7 +8,7 @@ import {
   MapPinIcon,
   ClipboardDocumentListIcon,
   ArrowPathIcon,
-  PercentBadgeIcon,
+  ShieldCheckIcon,
   ArchiveBoxIcon,
   ChatBubbleLeftRightIcon,
   CalendarIcon,
@@ -16,150 +16,163 @@ import {
   Cog6ToothIcon,
   ArrowRightOnRectangleIcon,
 } from '@heroicons/vue/24/outline'
-import type { MenuSection } from '@/types/sidebar'
+import type { Component } from 'vue'
+
+export interface MenuItem {
+  name: string
+  path: string
+  icon: Component
+  badge?: number
+  subItems?: MenuItem[]
+}
+
+export interface MenuSection {
+  title: string
+  items: MenuItem[]
+}
 
 export const MENU_SECTIONS: MenuSection[] = [
   {
-    title: 'MAIN MENU',
+    title: 'mainMenu',
     items: [
       {
-        name: 'Main Page',
+        name: 'mainPage',
         path: '/',
         icon: HomeIcon,
       },
       {
-        name: 'Products',
+        name: 'products',
         path: '/products',
         icon: CubeIcon,
         subItems: [
           {
-            name: 'All Products',
-            path: '/products/all',
+            name: 'allProducts',
+            path: '/products',
             icon: CubeIcon,
           },
           {
-            name: 'Add New Product',
+            name: 'addNewProduct',
             path: '/products/add',
             icon: CubeIcon,
           },
         ],
       },
       {
-        name: 'Tags',
+        name: 'tags',
         path: '/tags',
         icon: TagIcon,
       },
       {
-        name: 'Categories',
+        name: 'categories',
         path: '/categories',
         icon: RectangleStackIcon,
       },
       {
-        name: 'Sub Category',
+        name: 'subCategory',
         path: '/sub-category',
         icon: RectangleStackIcon,
       },
       {
-        name: 'Brands',
+        name: 'brands',
         path: '/brands',
         icon: TagIcon,
       },
       {
-        name: 'Scan Barcode',
+        name: 'scanBarcode',
         path: '/scan-barcode',
         icon: QrCodeIcon,
       },
       {
-        name: 'Import Products',
+        name: 'importProducts',
         path: '/import-products',
         icon: ArrowPathIcon,
       },
     ],
   },
   {
-    title: 'ANALYTICS',
+    title: 'analytics',
     items: [
       {
-        name: 'Sales',
+        name: 'sales',
         path: '/sales',
         icon: ChartBarIcon,
         badge: 65,
       },
       {
-        name: 'Point of Sales',
+        name: 'pointOfSales',
         path: '/pos',
         icon: MapPinIcon,
       },
       {
-        name: 'Leaderboards',
+        name: 'leaderboards',
         path: '/leaderboards',
         icon: ChartBarIcon,
       },
       {
-        name: 'Orders',
+        name: 'orders',
         path: '/orders',
         icon: ClipboardDocumentListIcon,
         subItems: [
           {
-            name: 'All Orders',
+            name: 'allOrders',
             path: '/orders/all',
             icon: ClipboardDocumentListIcon,
           },
           {
-            name: 'Pending Orders',
+            name: 'pendingOrders',
             path: '/orders/pending',
             icon: ClipboardDocumentListIcon,
           },
         ],
       },
       {
-        name: 'Refund',
+        name: 'refund',
         path: '/refund',
         icon: ArrowPathIcon,
       },
       {
-        name: 'Taxes',
+        name: 'taxes',
         path: '/taxes',
-        icon: PercentBadgeIcon,
+        icon: ShieldCheckIcon,
       },
       {
-        name: 'Stock',
+        name: 'stock',
         path: '/stock',
         icon: ArchiveBoxIcon,
       },
     ],
   },
   {
-    title: 'APPS',
+    title: 'apps',
     items: [
       {
-        name: 'Chat',
+        name: 'chat',
         path: '/chat',
         icon: ChatBubbleLeftRightIcon,
         badge: 10,
       },
       {
-        name: 'Calendar',
+        name: 'calendar',
         path: '/calendar',
         icon: CalendarIcon,
       },
       {
-        name: 'Email',
+        name: 'email',
         path: '/email',
         icon: EnvelopeIcon,
       },
     ],
   },
   {
-    title: 'SETTINGS',
+    title: 'settings',
     items: [
       {
-        name: 'Settings',
+        name: 'settings',
         path: '/settings',
         icon: Cog6ToothIcon,
       },
       {
-        name: 'Log Out',
+        name: 'logOut',
         path: '/logout',
         icon: ArrowRightOnRectangleIcon,
       },
