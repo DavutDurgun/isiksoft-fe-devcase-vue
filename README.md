@@ -2,6 +2,10 @@
 
 Bu proje, modern bir **Vue 3** ön yüz geliştirme ortamı için tasarlanmış bir boilerplate ve geliştirme vaka çalışmasıdır. Temiz kod prensipleri, ölçeklenebilirlik ve güncel teknolojiler kullanılarak oluşturulmuştur.
 
+
+# Demo / Canlı
+https://isiksoft-fe-devcase-vue.vercel.app/
+
 ## 🚀 Teknolojiler
 
 Bu proje aşağıdaki temel teknolojileri kullanır:
