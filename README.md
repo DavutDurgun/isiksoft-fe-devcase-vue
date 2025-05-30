@@ -124,7 +124,7 @@ Uygulama, vue-i18n kullanarak çoklu dil desteği sağlar.
 ## 💅 Stil (Tailwind CSS)
 
 - Yardımcı sınıf temelli (utility-first) bir yaklaşım olan Tailwind CSS ile hızlı ve tutarlı UI geliştirme sağlanır.
-- tailwind.config.ts dosyasında özelleştirmeler yapılabilir.
+- main.css dosyasında özelleştirmeler yapılabilir.
 
 ## 🤝 Katkıda Bulunma
 
