@@ -16,20 +16,7 @@ import {
   Cog6ToothIcon,
   ArrowRightOnRectangleIcon,
 } from '@heroicons/vue/24/outline'
-import type { Component } from 'vue'
-
-export interface MenuItem {
-  name: string
-  path: string
-  icon: Component
-  badge?: number
-  subItems?: MenuItem[]
-}
-
-export interface MenuSection {
-  title: string
-  items: MenuItem[]
-}
+import type { MenuSection } from '@/types/sidebar'
 
 export const MENU_SECTIONS: MenuSection[] = [
   {

@@ -18,6 +18,6 @@ interface Emits {
   (e: 'onClick'): void
 }
 
-const props = defineProps<Props>()
+defineProps<Props>()
 const emit = defineEmits<Emits>()
 </script>
